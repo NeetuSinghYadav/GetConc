@@ -1,0 +1,54 @@
+;minimization
+
+integrator               = steep
+; start time and timestep in ps
+tinit                    = 0.0
+dt                       = 0.025
+nsteps                   = 5000
+
+nstcomm                  = 1
+comm-grps		  = 
+emtol                    = 10
+
+; OUTPUT CONTROL OPTIONS = 
+
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 100
+nstenergy                = 100
+nstxout-compressed                = 0
+compressed-x-precision            = 0
+
+; NEIGHBORSEARCHING PARAMETERS = 
+
+cutoff-scheme            = Verlet
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz 
+
+
+
+; Method for doing electrostatics = 
+coulombtype              = reaction-field
+rcoulomb                 = 1.1
+
+epsilon_r                = 15
+epsilon_rf               = 0
+
+vdw_type                 = cut-off 
+rvdw                     = 1.1
+vdw-modifier             = Potential-shift-verlet
+DispCorr                 = No
+
+; Temperature coupling   = 
+tcoupl                   = no
+gen_vel                  = no
+
+
+constraints              = none 
+constraint_algorithm     = Lincs
+continuation             = no
+lincs_order              = 4
+lincs_warnangle          = 30
+
