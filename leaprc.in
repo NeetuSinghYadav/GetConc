@@ -1,0 +1,6 @@
+source leaprc.protein.ff14SB
+set default PBRadii mbondi3
+tri=sequence {LYS LYS SER LEU SER LEU SER LEU SER LEU SER LEU SER LEU LYS LYS}
+savepdb tri CASP_K2.pdb
+saveamberparm tri CASP_K2.parm7 CASP_K2.crd
+quit
